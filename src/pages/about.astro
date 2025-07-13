@@ -1,4 +1,14 @@
 ---
+const pageTitle = "About Labellum";
+
+const identity = {
+  firstName: "Vilhelm",
+  country: "Sweden",
+  occupation: "Car Detailer",
+  hobbies: ["programming", "3D modeling", "pixel art"],
+};
+
+const finished = false;
 ---
 
 <html lang="en">
@@ -7,15 +17,17 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Labellum - About</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
 
-    <h1>Labellum is a calm colortheme for your development enviorment.</h1>
-    <h2>A minimalist style that won't get in your way</h2>
+    <h1>{pageTitle}</h1>
+    <h3>Labellum is a calm colortheme for your development enviorment.</h3>
+    <h3>A minimalist style that won't get in your way</h3>
     <p>That's about it.</p>
+    {finished && <p>I finished the Astro tutorial! 😺</p>}
   </body>
 </html>
